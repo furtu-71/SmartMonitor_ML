@@ -1,0 +1,36 @@
+########################
+# 1. ENTORNOS VIRTUALES
+########################
+env/
+.venv/
+
+########################
+# 2. DATASETS GRANDES
+########################
+# ignora CUALQUIER .csv dentro de data/
+data/*.csv
+
+########################
+# 3. CACHÉS PYTHON
+########################
+__pycache__/
+*.py[cod]
+*.so
+
+########################
+# 4. CONFIG LOCAL / SO
+########################
+.vscode/
+.DS_Store
+Thumbs.db
+
+########################
+# 5. MODELOS SERIALIZADOS
+########################
+models/*.pkl
+
+########################
+# 6. NOTEBOOKS (opcional)
+########################
+*.ipynb
+.ipynb_checkpoints/
