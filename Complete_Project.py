@@ -24,7 +24,7 @@ from sklearn.model_selection import GroupKFold
 
 from joblib import dump
 from google.colab import files
-
+from pathlib import Path
 
 
 
@@ -37,11 +37,10 @@ from google.colab import files
 #------------------------------------------------------------------------------#
 
 # Definir la ruta al archivo CSV (ajusta según la ubicación real)
-csv_file_path = "/content/drive/MyDrive/Colab Notebooks/MASTER DATA SCIENCE/Proyecto final/date_production.csv"
+csv_path = Path("data/date_production.zip")
 
 # Cargar el DataFrame preprocesado desde el archivo CSV usando pd.read_csv
-df_production = pd.read_csv(csv_file_path)
-
+df_production = pd.read_csv(csv_path, compression="zip")
 #------------------------------------------------------------------------------#
 # VERIFICACIÓN DE LA EXISTENCIAS DE LAS COLUMNAS NECESARIAS                    #
 #------------------------------------------------------------------------------#
