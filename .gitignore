@@ -34,3 +34,7 @@ models/*.pkl
 ########################
 *.ipynb
 .ipynb_checkpoints/
+
+# ── NO subir binarios grandes ───────────────────
+*.zip
+models/*.pkl
