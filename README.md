@@ -82,7 +82,7 @@ Genera de nuevo el pipeline y los modelos en **models/**
 ## 7. Licencia y autoría
 
 Proyecto bajo licencia MIT.  
-Creado con 🛠️ y ☕ por **Fernando González**  
+Creado con 🛠️ y ☕ por **Fernando Urtubia**  
 ([@furtu-71](https://github.com/furtu-71)).
 
 > Los datos industriales pueden ser caóticos; el código, no.
