@@ -1,7 +1,25 @@
+# --- rutas ------------------------------------------------------------------
+import sys, pathlib
+SRC_DIR = pathlib.Path(__file__).resolve().parents[2] / "src"   # ← dos niveles arriba
+if str(SRC_DIR) not in sys.path:                                # evita duplicados
+    sys.path.append(str(SRC_DIR))
+
+# --- resto de imports -------------------------------------------------------
+import importlib
+from smartmonitor import preprocessing_steps        # alias igual que antes
+importlib.reload(preprocessing_steps)
+
+from smartmonitor.preprocessing_steps import (
+    validate_columns, convert_experiment_id_to_category,
+    process_timestamp_features, remove_duplicates,
+    add_outlier_columns, robust_scale_features,
+    median_impute_numeric, MONITORED_VARS, EXCLUDED
+)
+
 ###################################################
 # Paso 1 – Crear el módulo preprocessing_steps.py #
 ###################################################
-%%writefile preprocessing_steps.py
+#%%writefile preprocessing_steps.py
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import RobustScaler

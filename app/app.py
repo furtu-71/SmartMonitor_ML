@@ -1,5 +1,8 @@
+import sys, pathlib
+sys.path.append(str(pathlib.Path(__file__).resolve().parents[1] / "src"))
+
 # app.py ───────────────────────────────────────────────────────────
-import preprocessing_steps          # registra las 6 funciones
+from smartmonitor import preprocessing_steps          # registra las 6 funciones
 from pathlib import Path
 from PIL import Image
 import joblib, pandas as pd, streamlit as st, plotly.express as px
