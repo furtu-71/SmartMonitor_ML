@@ -143,7 +143,7 @@ Cada decisión —desde la gestión de outliers hasta la validación cruzada y l
 
 ---
 
-## Métricas obtenidas durante el desarrollo y optimización del modelo
+## 11. Métricas obtenidas durante el desarrollo y optimización del modelo
 
 ### Comparativa de Clustering: Silhouette Score Promedio
 
@@ -159,13 +159,13 @@ Cada decisión —desde la gestión de outliers hasta la validación cruzada y l
 
 ---
 
-## 11. Cierre
+## 12. Cierre
 
 Este TFM no solo ha resuelto un problema técnico; ha construido una lógica de trabajo donde cada paso está fundamentado en la realidad de los datos y las necesidades de la industria. El porqué guía el cómo, y el resultado es un sistema preparado para la complejidad y el cambio.
 
 ---
 
-## 12. Arranque Exprés y Ejecución del Dashboard
+## 13. Arranque Exprés y Ejecución del Dashboard
 
 Para probar el proyecto en tu equipo, sigue estos pasos:
 
@@ -188,12 +188,12 @@ Se abrirá en **http://localhost:8501** y podrás explorar tendencias, clústere
 
 ---
 
-## 13. Bibliografía y Fuentes de Consulta
+## 14. Bibliografía y Fuentes de Consulta
 
 - **Kaggle - Production Plant Data for Condition Monitoring:**  
   [https://www.kaggle.com/datasets/inIT-OWL/production-plant-data-for-condition-monitoring](https://www.kaggle.com/datasets/inIT-OWL/production-plant-data-for-condition-monitoring)
 ---
-## 14. ¿Cómo funciona el pipeline?
+## 15. ¿Cómo funciona el pipeline?
 
 | Paso                    | Archivo / función                            | Descripción breve |
 |-------------------------|---------------------------------------------|-------------------|
@@ -205,7 +205,7 @@ Se abrirá en **http://localhost:8501** y podrás explorar tendencias, clústere
 
 ---
 
-## 15. Reentrenar todo desde cero
+## 16. Reentrenar todo desde cero
 
 ```bash
 python src/smartmonitor/Complete_Project.py
@@ -216,7 +216,7 @@ Genera de nuevo el pipeline y los modelos en **models/**
 
 ---
 
-## 16. Solución de problemas
+## 17. Solución de problemas
 
 | Síntoma / mensaje                             | Arreglo rápido |
 |----------------------------------------------|----------------|
@@ -225,8 +225,15 @@ Genera de nuevo el pipeline y los modelos en **models/**
 | Dashboard arranca lento                      | Usa `@st.cache_resource` o comenta modelos que no necesites. |
 
 ---
+## 18. Enlace a la Aplicación Desplegada
 
-## 17. Contribuir
+Puedes acceder a la versión en línea del dashboard en el siguiente enlace:
+
+[https://furtu-71-smartmonitor-ml-appapp-utqxd3.streamlit.app/](https://furtu-71-smartmonitor-ml-appapp-utqxd3.streamlit.app/)
+
+---
+
+## 19. Contribuir
 
 1. Haz *fork*, crea tu rama (`git checkout -b mejora-x`).  
 2. Formatea con `black .` y asegúrate de que los tests (próximamente) pasan.  
@@ -236,7 +243,7 @@ Genera de nuevo el pipeline y los modelos en **models/**
 
 ---
 
-## 18 . Licencia y autoría
+## 20 . Licencia y autoría
 
 Proyecto bajo licencia MIT.  
 Creado con 🛠️ y ☕ por **Fernando Urtubia**  
