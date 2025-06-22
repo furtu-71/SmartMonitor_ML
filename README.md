@@ -83,15 +83,11 @@ No basta con mirar medias y desviaciones. La riqueza de los datos se revela en l
 
 Los heatmaps y scatter plots permiten intuir redundancias, dependencias y también rupturas: cuando el sistema se acerca al fallo, las relaciones se vuelven caóticas. De ahí que, en las primeras fases, se conserve todo, para no perder pistas potenciales sobre el deterioro.
 
----
-
 ![Heatmap](assets/Diagrama_de_calor.png)
 
 ---
 
 Una vez completado el preprocesamiento y el análisis exploratorio, el siguiente paso consiste en identificar patrones de comportamiento en los datos que permitan anticipar el fallo. Para ello, se recurre a técnicas de clustering no supervisado, siendo K-means uno de los métodos más extendidos por su sencillez e interpretabilidad. Sin embargo, la correcta aplicación de K-means exige determinar previamente el número óptimo de clusters (K) que mejor representa la estructura real de los datos. Para tomar esta decisión de forma objetiva, se emplean herramientas como el método del codo y métricas internas de validación, cuyos resultados se presentan a continuación
-
----
 
 ![Curva del método del codo](assets/Método_del_codo.png)
 
@@ -100,8 +96,6 @@ Una vez completado el preprocesamiento y el análisis exploratorio, el siguiente
 ---
 
 Aunque en este proyecto no se persigue la reducción de la dimensionalidad ni la eliminación de variables, se ha empleado el Análisis de Componentes Principales (PCA) con el objetivo de visualizar la estructura interna de los datos en dos dimensiones. Esta técnica facilita la interpretación visual, permitiendo observar si existen agrupaciones naturales que respalden la aplicación de métodos de clustering y la elección del número óptimo de clusters. De este modo, el uso de PCA se justifica como una herramienta complementaria de exploración y validación visual, sin afectar a la integridad del conjunto de variables originales utilizado en el modelado.
-
----
 
 ![ Scatter plot (con reducción dimensional mediante PCA)](assets/Grafico_de_dispersion_agrupamiento_cluster_K=3_reduccion_PCA.png)
 
