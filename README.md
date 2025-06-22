@@ -147,15 +147,15 @@ Cada decisión —desde la gestión de outliers hasta la validación cruzada y l
 
 ### Comparativa de Clustering: Silhouette Score Promedio
 
-| Algoritmo / Enfoque              | Preprocesamiento                                | Silhouette Score Directo | Silhouette Score (CV) |
-|----------------------------------|--------------------------------------------------|---------------------------|------------------------|
-| **K-Means (k=3)**                | StandardScaler                                  | 0.451                     | 0.460                  |
-| **K-Means++**                    | StandardScaler (n_init mejorado)                | 0.451                     | 0.483                  |
-| **OPTICS (config inicial)**      | StandardScaler                                  | –0.260                    | —                      |
-| **Ensemble Clustering (v1)**     | StandardScaler (dataset reducido)               | 0.434                     | 0.529                  |
-| **Ensemble Clustering (v2)**     | RobustScaler (dataset reducido)                 | 0.717                     | 0.741                  |
-| **Ensemble Clustering (final)**  | Imputación + RobustScaler (dataset completo)    | **0.907**                 | —                      |
-| **Modelo predictivo auxiliar**   | Mismo pipeline (validación cruzada agrupada)    | —                         | **99.87 % Accuracy**   |
+| Algoritmo / Enfoque              | Preprocesamiento                                       | Silhouette Score Directo | Silhouette Score (CV)        |
+|----------------------------------|---------------------------------------------------------|---------------------------|-------------------------------|
+| **K-Means (k=3)**                | StandardScaler                                         | 0.451                     | 0.460                         |
+| **K-Means++**                    | StandardScaler (n_init mejorado)                       | 0.451                     | 0.483                         |
+| **OPTICS (config inicial)**      | StandardScaler                                         | –0.260                    | —                             |
+| **Ensemble Clustering (v1)**     | StandardScaler (dataset reducido)                      | 0.434                     | 0.529                         |
+| **Ensemble Clustering (v2)**     | RobustScaler (dataset reducido)                        | 0.717                     | 0.741                         |
+| **Ensemble Clustering (final)**  | SimpleImputer + RobustScaler (dataset completo)        | **0.907**                 | —                             |
+| **Modelo predictivo auxiliar**   | Mismo pipeline (validación cruzada agrupada)           | —                         | **99.87 % Accuracy**          |
 
 ---
 
