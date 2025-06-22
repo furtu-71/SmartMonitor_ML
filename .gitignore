@@ -34,6 +34,7 @@ models/*.pkl
 ########################
 *.ipynb
 .ipynb_checkpoints/
+!notebooks/SmartMonitor_TFM.ipynb
 
 # ── NO subir binarios grandes ───────────────────
 *.zip
