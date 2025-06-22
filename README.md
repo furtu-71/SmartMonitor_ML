@@ -157,6 +157,8 @@ Cada decisión —desde la gestión de outliers hasta la validación cruzada y l
 | **Ensemble Clustering (final)**  | Imputación + RobustScaler (dataset completo)    | **0.907**                 | —                      |
 | **Modelo predictivo auxiliar**   | Mismo pipeline (validación cruzada agrupada)    | —                         | **99.87 % Accuracy**   |
 
+---
+
 ## 11. Cierre
 
 Este TFM no solo ha resuelto un problema técnico; ha construido una lógica de trabajo donde cada paso está fundamentado en la realidad de los datos y las necesidades de la industria. El porqué guía el cómo, y el resultado es un sistema preparado para la complejidad y el cambio.
