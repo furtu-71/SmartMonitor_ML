@@ -9,7 +9,8 @@ import joblib, pandas as pd, streamlit as st, plotly.express as px
 from sklearn.decomposition import PCA
 
 # 🟡── Config global ───────────────────────────────────────────────
-ICON_PATH = Path("assets/icono smartmonitor.png")
+# Usamos Path para construir la ruta relative a este archivo
+ICON_PATH = Path("assets/icono_smartmonitor.png")
 icon_img  = Image.open(ICON_PATH)
 
 st.set_page_config(
@@ -20,17 +21,31 @@ st.set_page_config(
 st.title("🔧 SmartMonitor – Mantenimiento Predictivo")
 
 # 🟡── Rutas absolutas ─────────────────────────────────────────────
-DATA_PATH   = Path("data/date_production.zip")          # CSV completo
-PICKLE_X    = Path("models/X_sample_trans.pkl")         # 22 838 × 25
-PICKLE_Y    = Path("models/y_cluster_sample.pkl")       # 22 838 labels
+DATA_PATH   = Path("data/date_production.zip")          # Dataset por defecto
+PICKLE_X    = Path("models/X_sample_trans.pkl")         # 22,838 × 25
+PICKLE_Y    = Path("models/y_cluster_sample.pkl")       # 22,838 labels
 
-# 🟡── Carga de datos base ─────────────────────────────────────────
+# 🟡── Carga de Datos: opción de usar el dataset por defecto o uno subido ─────────────
+# Aquí se añade un widget para cargar un archivo CSV
+uploaded_file = st.file_uploader("Sube tu dataset (CSV)", type=["csv"])
+
 @st.cache_data
-def load_full_csv() -> pd.DataFrame:
-    return pd.read_csv(DATA_PATH, compression="zip")
+def load_dataset(file_obj=None) -> pd.DataFrame:
+    if file_obj is not None:
+        # Si el usuario ha subido un archivo, se carga ese
+        return pd.read_csv(file_obj)
+    else:
+        # Si no hay archivo subido, se usa el dataset por defecto (con compresión zip)
+        return pd.read_csv(DATA_PATH, compression="zip")
 
-df = load_full_csv()
-st.success(f"Dataset cargado: {df.shape[0]:,} filas × {df.shape[1]} columnas")
+# Cargar el dataset dependiendo de si se subió un archivo o no
+if uploaded_file is not None:
+    df = load_dataset(uploaded_file)
+    st.info("Dataset subido por el usuario")
+else:
+    df = load_dataset()  # Carga del dataset por defecto
+    st.success(f"Dataset cargado: {df.shape[0]:,} filas × {df.shape[1]} columnas")
+
 st.dataframe(df.head())
 
 # 🟡── Botón para ver el scatter de referencia ─────────────────────
@@ -56,7 +71,7 @@ if st.button("Mostrar scatter de referencia"):
         )
         st.stop()
 
-    # 🟡 PCA 2 D idéntica a la del Colab (misma semilla) ──────────
+    # 🟡 PCA 2D idéntica a la del Colab (misma semilla) ──────────
     sensor_cols = [c for c in X_s.columns if "_modified_z" in c]
     coords = PCA(n_components=2, random_state=42).fit_transform(X_s[sensor_cols])
 
