@@ -231,6 +231,10 @@ Puedes acceder a la versión en línea del dashboard en el siguiente enlace:
 
 [https://furtu-71-smartmonitor-ml-appapp-utqxd3.streamlit.app/](https://furtu-71-smartmonitor-ml-appapp-utqxd3.streamlit.app/)
 
+**App Streamlit**  
+
+_Nota: puede tardar unos segundos en “despertar” si lleva inactiva._
+
 ---
 
 ## 19. Contribuir
@@ -247,6 +251,6 @@ Puedes acceder a la versión en línea del dashboard en el siguiente enlace:
 
 Proyecto bajo licencia MIT.  
 Creado con 🛠️ y ☕ por **Fernando Urtubia**  
-([@furtu-71](https://github.com/furtu-71)).
+([@furtu-71](https://github.com/furtu-71/SmartMonitor_ML)).
 
 > Los datos industriales pueden ser caóticos; el código, no.
