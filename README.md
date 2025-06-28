@@ -18,14 +18,11 @@ El proyecto SmartMonitor TFM se centra en anticipar fallos críticos en sistemas
 | **src/smartmonitor/** | Código reutilizable: preprocesamiento, validación y script de entrenamiento (`Complete_Project.py`). |
 | **data/**             | Muestra reducida del CSV original (`date_production.zip`).                           |
 | **assets/**           | Gráficos e imágenes que respaldan el análisis y el README.                           |
-| **models/**           | Modelos serializados (Pickles) generados al entrenar (p.ej. `preprocessing_pipeline.pkl`). |
-| **notebooks/**        | Notebooks de Google Colab con el desarrollo pormenorizado:<br/>  
-  &bull; Exploración y limpieza de datos<br/>  
-  &bull; Generación de features y manejo de outliers (_modified z-score_)<br/>  
-  &bull; Experimentación con distintos algoritmos y variantes de preprocesado<br/>  
-  &bull; Afinado del pipeline hasta la solución óptima |
+| **models/**           | Modelos serializados (Pickles) generados al entrenar (p. ej. `preprocessing_pipeline.pkl`). |
+| **notebooks/**        | Notebooks de Google Colab con el desarrollo pormenorizado:<br/>&bull; Exploración y limpieza de datos<br/>&bull; Generación de features y manejo de outliers (_modified z-score_)<br/>&bull; Experimentación con distintos algoritmos y variantes de preprocesado<br/>&bull; Afinado del pipeline hasta la solución óptima |
 
 ---
+
 
 
 
