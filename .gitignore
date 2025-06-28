@@ -39,3 +39,5 @@ models/*.pkl
 # ── NO subir binarios grandes ───────────────────
 *.zip
 models/*.pkl
+!models/X_sample_trans.pkl
+!models/y_cluster_sample.pkl
